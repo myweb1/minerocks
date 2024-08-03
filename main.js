@@ -47,3 +47,18 @@ function taladro() {
         document.getElementById("miney").innerHTML = dinero
     }
 }
+
+function taladrelec() {
+    if (dinero >= 2000) {
+        dinero -= 2000
+        pico += 100
+        document.getElementById("rocamina").innerHTML = pico
+        document.getElementById("miney").innerHTML = dinero
+    }
+}
+
+window.addEventListener("keydown", function entermalo(enter) {
+    if ( enter.keyCode == "13" ) {
+        enter.preventDefault()
+    }
+})
