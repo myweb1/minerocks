@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+    color: white;
+    
+}
+
+#verde {
+    background-color: rgb(0, 255, 0);
+    border-color: white;
+}
+
+#Minar {
+    background-color: rgb(147, 147, 147);
+    border-color: white;
+}
+
+#Mejoras {
+    color: greenyellow;
+    background-color: green;
+}
