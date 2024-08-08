@@ -28,3 +28,24 @@ body{
     height: 50px;
     width: 50px ;
 }
+
+#hierro {
+    height: 50px;
+    width: 50px;
+
+}
+
+#hierroingot {
+   
+    border-radius: 0;
+    border-color: white;
+}
+
+#mejoraherro {
+    background-color: gray;
+}
+
+#h { 
+    height: 80px;
+    width:  80px;
+}

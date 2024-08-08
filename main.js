@@ -1,6 +1,7 @@
 var controcas = 0
 var dinero = 0
 var pico = 1
+var conthierro = 0
 function funcminar() {
     controcas += pico
     document.getElementById("cantrocas").innerHTML = controcas
@@ -55,6 +56,26 @@ function taladrelec() {
         document.getElementById("rocamina").innerHTML = pico
         document.getElementById("miney").innerHTML = dinero
     }
+}
+
+function automexcava() {
+    if (dinero >= 5800) {
+        dinero -= 5800
+        pico += 299
+        document.getElementById("rocamina").innerHTML = pico
+        document.getElementById("miney").innerHTML = dinero
+    }
+}
+
+function hierroconvert() {
+    if (controcas >= 1000) {
+        controcas /2
+        conthierro += controcas
+        controcas = 0
+        document.getElementById("hierruno").innerHTML = conthierro
+        document.getElementById("cantrocas").innerHTML = controcas
+    }
+
 }
 
 window.addEventListener("keydown", function entermalo(enter) {
