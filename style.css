@@ -5,13 +5,21 @@ body{
 }
 
 #verde {
-    background-color: rgb(0, 255, 0);
-    border-color: white;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 255, 0);
+}
+#verde:hover {
+    background-color: greenyellow;
+    font-size: 30px;
+    font-family: "Afacad Flux", sans-serif;
 }
 
 #Minar {
-    background-color: rgb(147, 147, 147);
+    background-color: rgb(0, 0, 0);
     border-color: white;
+}
+#Minar:hover {
+    background-color: rgb(167, 167, 167);
 }
 
 #Mejoras {
@@ -36,9 +44,14 @@ body{
 }
 
 #hierroingot {
-   
+   background-color: black;
     border-radius: 0;
     border-color: white;
+}
+#hierroingot:hover{
+    background-color: white;
+    font-size: 30px;
+    font-family: "Lemon", serif;
 }
 
 #mejoraherro {
