@@ -102,17 +102,25 @@ function mejorahierro2() {
     }
 }
 function mejorahierro3() {
-    if (conthierro >= 42000) {
-        conthierro -= 42000
+    if (conthierro >= 212000) {
+        conthierro -= 212000
         pico += 22250
         document.getElementById("rocamina").innerHTML = pico
         document.getElementById("hierruno").innerHTML = conthierro
     }
 }
 function mejorahierro4() {
-    if (conthierro >=  425000) {
-        conthierro -=  425000
-        pico += 222250
+    if (conthierro >=  1062500) {
+        conthierro -=  1062500
+        pico += 111250
+        document.getElementById("rocamina").innerHTML = pico
+        document.getElementById("hierruno").innerHTML = conthierro
+    }
+}
+function mejorahierro5() {
+    if (conthierro >=  5312500) {
+        conthierro -=  5312500
+        pico += 556250
         document.getElementById("rocamina").innerHTML = pico
         document.getElementById("hierruno").innerHTML = conthierro
     }
