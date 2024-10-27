@@ -2,6 +2,7 @@ var controcas = 0
 var dinero = 0
 var pico = 1
 var conthierro = 0
+var coalgi = 0
 function funcminar() {
     controcas += pico
     document.getElementById("cantrocas").innerHTML = controcas
@@ -77,10 +78,16 @@ function automexcava() {
 
 function hierroconvert() {
     if (controcas >= 1000) {
-        conthierro += controcas/2
-        controcas = 0
-        document.getElementById("hierruno").innerHTML = conthierro
-        document.getElementById("cantrocas").innerHTML = controcas
+        if (coalgi >= 500){
+            conthierro += controcas/2
+            conthierro += coalgi/3
+            controcas = 0
+            coalgi = 0
+            document.getElementById("hierruno").innerHTML = conthierro
+            document.getElementById("cantrocas").innerHTML = controcas
+            document.getElementById("Coalcant").innerHTML = coalgi
+        }
+            
     }
 
 }
@@ -125,8 +132,24 @@ function mejorahierro5() {
         document.getElementById("hierruno").innerHTML = conthierro
     }
 }
-
-
+function venderhierro() {
+    dinero += conthierro*3
+    conthierro = 0
+    document.getElementById("hierruno").innerHTML = conthierro
+    document.getElementById("miney").innerHTML = dinero
+}
+function Coalg() {
+    coalgi += pico/2
+    document.getElementById("Coalcant").innerHTML = coalgi
+}
+function mejorahierro6() {
+    if (conthierro >=  26562500) {
+        conthierro -=  26562500
+        pico += 2781250
+        document.getElementById("rocamina").innerHTML = pico
+        document.getElementById("hierruno").innerHTML = conthierro
+    }
+}
 
 window.addEventListener("keydown", function entermalo(enter) {
     if ( enter.keyCode == "13" ) {
