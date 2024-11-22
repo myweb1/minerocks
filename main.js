@@ -3,6 +3,9 @@ var dinero = 0
 var pico = 1
 var conthierro = 0
 var coalgi = 0
+var aleanitecont = 0
+var trutpic = 1
+var milisecondss = 10000
 function funcminar() {
     controcas += pico
     document.getElementById("cantrocas").innerHTML = controcas
@@ -148,6 +151,83 @@ function mejorahierro6() {
         pico += 2781250
         document.getElementById("rocamina").innerHTML = pico
         document.getElementById("hierruno").innerHTML = conthierro
+    }
+}
+function Createalloy() {
+    if(coalgi >= 20000){
+        if(conthierro >= 50000000){
+            aleanitecont += conthierro/2
+            aleanitecont += coalgi/2
+            coalgi=0
+            conthierro=0
+            document.getElementById("hierruno").innerHTML = conthierro
+            document.getElementById("Coalcant").innerHTML = coalgi
+            document.getElementById("Aloyconter").innerHTML = aleanitecont
+        }
+    }
+        
+}
+function AlloySell() {
+    dinero = aleanitecont * 5
+    aleanitecont = 0
+    document.getElementById("miney").innerHTML = dinero
+    document.getElementById("Aloyconter").innerHTML = aleanitecont
+
+}
+function MAMejoracontrtiemp() {
+    if(aleanitecont>= 47000000) {
+    pico += 5006250
+    aleanitecont -= 47000000
+    document.getElementById("Aloyconter").innerHTML = aleanitecont
+    document.getElementById("rocamina").innerHTML = pico
+    }
+    
+}
+function MAbrbiomej() {
+    if(aleanitecont >= 420000000) {
+        pico += 45056250
+        aleanitecont -= 420000000
+        document.getElementById("Aloyconter").innerHTML = aleanitecont
+        document.getElementById("rocamina").innerHTML = pico
+    }
+}
+function CreateInterval() {
+    if(aleanitecont>=3780000000){
+        aleanitecont -= 3780000000
+        document.getElementById("Aloyconter").innerHTML = aleanitecont
+        wow = window.setInterval(Chambahierr, milisecondss);
+        document.getElementById("hierrchamba").innerHTML = ""
+        document.getElementById("turt").innerHTML = "tu turt es"+trutpic+"/"+milisecondss
+    }
+}
+
+function Chambahierr() {
+    conthierro += trutpic
+    document.getElementById("hierruno").innerHTML = conthierro
+}
+
+function msminos() {
+    window.clearInterval(wow)
+    milisecondss -= 500
+    wow = window.setInterval(Chambahierr, milisecondss);
+    document.getElementById("turt").innerHTML = "tu turt es"+trutpic+"/"+milisecondss
+}
+
+function Turtpicmasun() {
+    if(aleanitecont>=306180000000) {
+        trutpic += 5
+        aleanitecont -= 306180000000
+        document.getElementById("Aloyconter").innerHTML = aleanitecont
+        document.getElementById("turt").innerHTML = "tu turt es"+trutpic+"/"+milisecondss
+    }
+}
+
+function Turtpicmasdos() {
+    if(aleanitecont>=2755620000000) {
+        trutpic += 45
+        aleanitecont -= 2755620000000
+        document.getElementById("Aloyconter").innerHTML = aleanitecont
+        document.getElementById("turt").innerHTML = "tu turt es"+trutpic+"/"+milisecondss
     }
 }
 
