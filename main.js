@@ -6,6 +6,28 @@ var coalgi = 0
 var aleanitecont = 0
 var trutpic = 1
 var milisecondss = 10000
+var alrturtpic = false
+
+document.getElementById("cantrocas").innerHTML = localStorage.setItem("cantrocasvar",controcas);
+document.getElementById("miney").innerHTML = localStorage.setItem("dinero",dinero);
+document.getElementById("hierruno").innerHTML = localStorage.setItem("conthierro",conthierro);
+document.getElementById("Coalcant").innerHTML = localStorage.setItem("combustible",coalgi);
+document.getElementById("Aloyconter").innerHTML = localStorage.setItem("aleanite",aleanitecont);
+if (dlocalStorage.getItem("pico") > 1) {
+    document.getElementById("rocamina").innerHTML = localStorage.getItem("pico",pico);
+}
+if (localStorage.getItem("trutpictrufals") == true) {
+    localStorage.getItem("trutpic",trutpic);
+    localStorage.getItem("milisecondss",milisecondss);
+    wow = window.setInterval(Chambahierr, milisecondss);
+    document.getElementById("hierrchamba").innerHTML = ""
+    document.getElementById("turt").innerHTML = "tu turt es"+trutpic+"/"+milisecondss
+
+}
+localStorage.setItem("trutpic",trutpic);
+localStorage.setItem("milisecondss",milisecondss);
+
+
 function funcminar() {
     controcas += pico
     document.getElementById("cantrocas").innerHTML = controcas
@@ -163,6 +185,7 @@ function Createalloy() {
             document.getElementById("hierruno").innerHTML = conthierro
             document.getElementById("Coalcant").innerHTML = coalgi
             document.getElementById("Aloyconter").innerHTML = aleanitecont
+            alrturtpic = true
         }
     }
         
@@ -231,8 +254,31 @@ function Turtpicmasdos() {
     }
 }
 
+function save() {
+    localStorage.setItem("cantrocasvar",controcas);
+    localStorage.setItem("dinero",dinero);
+    localStorage.setItem("conthierro",conthierro);
+    localStorage.setItem("combustible",coalgi);
+    localStorage.setItem("aleanite",aleanitecont);
+    localStorage.setItem("trutpic",trutpic);
+    localStorage.setItem("milisecondss",milisecondss);
+    localStorage.setItem("pico",pico);
+    localStorage.setItem("trutpictrufals",alrturtpic);
+    document.getElementById("savres").innerHTML = "¡Guardado!"
+    window.setTimeout(Timeout,5000)
+}
+
+function Timeout() {
+    document.getElementById("savres").innerHTML = ""
+}
+
+function reset() {
+    localStorage.clear()
+}
+
 window.addEventListener("keydown", function entermalo(enter) {
     if ( enter.keyCode == "13" ) {
         enter.preventDefault()
     }
 })
+
