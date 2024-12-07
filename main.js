@@ -6,6 +6,36 @@ var coalgi = 0
 var aleanitecont = 0
 var trutpic = 1
 var milisecondss = 10000
+var alrturtpic = false
+var alrsaved = false
+
+alrsaved = localStorage.getItem("saved")
+
+    controcas =Number(localStorage.getItem("cantrocasvar"))||0
+    dinero = Number(localStorage.getItem("dinero"))||0;
+    conthierro = Number(localStorage.getItem("conthierro"))||0;
+    coalgi = Number(localStorage.getItem("combustible"))||0;
+    aleanitecont = Number(localStorage.getItem("aleanite"))||0;
+    document.getElementById("cantrocas").innerHTML = controcas
+    document.getElementById("miney").innerHTML = dinero
+    document.getElementById("hierruno").innerHTML = conthierro
+    document.getElementById("Coalcant").innerHTML = coalgi
+    document.getElementById("Aloyconter").innerHTML = aleanitecont
+    alrturtpic = localStorage.getItem("trutpictrufals");
+    if (localStorage.getItem("pico") > 1) {
+        document.getElementById("rocamina").innerHTML = localStorage.getItem("pico",pico);
+    }
+    if (localStorage.getItem("trutpictrufals") == true) {
+        trutpic = localStorage.getItem("trutpic",trutpic);
+        milisecondss = localStorage.getItem("milisecondss",milisecondss);
+        wow = window.setInterval(Chambahierr, milisecondss);
+        document.getElementById("hierrchamba").innerHTML = ""
+        document.getElementById("turt").innerHTML = "tu turt es"+trutpic+"/"+milisecondss
+
+    }
+
+
+
 function funcminar() {
     controcas += pico
     document.getElementById("cantrocas").innerHTML = controcas
@@ -163,6 +193,7 @@ function Createalloy() {
             document.getElementById("hierruno").innerHTML = conthierro
             document.getElementById("Coalcant").innerHTML = coalgi
             document.getElementById("Aloyconter").innerHTML = aleanitecont
+            alrturtpic = true
         }
     }
         
@@ -231,8 +262,33 @@ function Turtpicmasdos() {
     }
 }
 
+function save() {
+    alrsaved = true
+    localStorage.setItem("cantrocasvar",controcas);
+    localStorage.setItem("dinero",dinero);
+    localStorage.setItem("conthierro",conthierro);
+    localStorage.setItem("combustible",coalgi);
+    localStorage.setItem("aleanite",aleanitecont);
+    localStorage.setItem("trutpic",trutpic);
+    localStorage.setItem("milisecondss",milisecondss);
+    localStorage.setItem("pico",pico);
+    localStorage.setItem("trutpictrufals",alrturtpic);
+    localStorage.setItem("saved",alrsaved);
+    document.getElementById("savres").innerHTML = "¡Guardado!"
+    window.setTimeout(Timeout,5000)
+}
+
+function Timeout() {
+    document.getElementById("savres").innerHTML = ""
+}
+
+function reset() {
+    localStorage.clear()
+}
+
 window.addEventListener("keydown", function entermalo(enter) {
     if ( enter.keyCode == "13" ) {
         enter.preventDefault()
     }
 })
+
