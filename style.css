@@ -73,7 +73,7 @@ body{
     color: black;
     background-color: black;
     position: absolute;
-    top: 230px;
+    top: 190px;
     right: 50px;
     font-size: 10px;
     border-color: greenyellow;
@@ -101,7 +101,7 @@ body{
 #Coal {
     position: absolute;
     left: 50px;
-    top: 300px;
+    top: 400px;
     background-color: black;
 }
 #Coal:hover {
@@ -117,7 +117,7 @@ body{
     color: white;
     position: absolute;
     left: 50px;
-    top: 350px;
+    top: 450px;
 }
 #alle {
     position: absolute;
@@ -167,4 +167,55 @@ body{
     position: absolute;
     top: 350px;
     right: 100px;
+}
+#Saved {
+    background-color: greenyellow;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-color: black;
+    font-size: 20px;
+    border-style:double;
+}
+#Reset{ 
+    position: absolute;
+    right: 50px;
+    background-color: red;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-style: dashed;
+    border-color: black;
+}
+#savres{
+    position: absolute;
+}
+#chipimg {
+    width: 50px;
+    height: 50px;
+}
+#chipbut{
+    position: absolute;
+    right: 300px;
+    top: 200px;
+    background-color: black;
+    border-color: rgb(143, 236, 255);
+    border-style:groove;
+    border-radius: 5px;
+    
+}
+#chipbut:hover{
+    background-color: rgb(128, 208, 255);
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+#cantchip {
+    position: absolute;
+    top: 240px;
+    right: 300px;
+}
+#trutchip{
+    position: relative;
+    bottom: 54px;
+    left: 250px;
 }

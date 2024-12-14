@@ -12,7 +12,7 @@ var alrsaved = false
 alrsaved = localStorage.getItem("saved")
 
     controcas =Number(localStorage.getItem("cantrocasvar"))||0
-    dinero = Number(localStorage.getItem("dinero"))||0;
+    dinero = Number(localStorage.getItem("dinero"))||0; 
     conthierro = Number(localStorage.getItem("conthierro"))||0;
     coalgi = Number(localStorage.getItem("combustible"))||0;
     aleanitecont = Number(localStorage.getItem("aleanite"))||0;
@@ -238,6 +238,8 @@ function Chambahierr() {
 }
 
 function msminos() {
+    aleanitecont -= 34020000000
+    document.getElementById("Aloyconter").innerHTML = aleanitecont
     window.clearInterval(wow)
     milisecondss -= 500
     wow = window.setInterval(Chambahierr, milisecondss);
@@ -284,6 +286,8 @@ function Timeout() {
 
 function reset() {
     localStorage.clear()
+    document.getElementById("savres").innerHTML = "Reseteado!"
+    window.setTimeout(Timeout,5000)
 }
 
 window.addEventListener("keydown", function entermalo(enter) {
