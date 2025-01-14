@@ -119,6 +119,11 @@ body{
     left: 50px;
     top: 450px;
 }
+#coalturt {
+    position: absolute;
+    top: 350px;
+    left: 50px;
+}
 #alle {
     position: absolute;
     color: black;
@@ -218,4 +223,7 @@ body{
     position: relative;
     bottom: 54px;
     left: 250px;
+}
+#Chipup{
+    background-color: rgba(0, 0, 255, 0.5);
 }

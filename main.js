@@ -7,31 +7,54 @@ var aleanitecont = 0
 var trutpic = 1
 var milisecondss = 10000
 var alrturtpic = false
+var chipcant = 0
+var alrrocturtpick = false
+var rocktrutpic = 5
+var rockmilisecondss = 5000
 var alrsaved = false
+var alrcoalturtpick = false
+var coalpic = 5 
+var coalmilisecondss = 5000
 
 alrsaved = localStorage.getItem("saved")
+alrrocturtpick = localStorage.getItem("rocktrutpictrufals")
+alrturtpic = localStorage.getItem("trutpictrufals")
 
     controcas =Number(localStorage.getItem("cantrocasvar"))||0
     dinero = Number(localStorage.getItem("dinero"))||0; 
     conthierro = Number(localStorage.getItem("conthierro"))||0;
     coalgi = Number(localStorage.getItem("combustible"))||0;
     aleanitecont = Number(localStorage.getItem("aleanite"))||0;
+    chipcant = Number(localStorage.getItem("chipcant"))||0;
     document.getElementById("cantrocas").innerHTML = controcas
     document.getElementById("miney").innerHTML = dinero
     document.getElementById("hierruno").innerHTML = conthierro
     document.getElementById("Coalcant").innerHTML = coalgi
     document.getElementById("Aloyconter").innerHTML = aleanitecont
+    document.getElementById("cantchip").innerHTML = chipcant
     alrturtpic = localStorage.getItem("trutpictrufals");
-    if (localStorage.getItem("pico") > 1) {
-        document.getElementById("rocamina").innerHTML = localStorage.getItem("pico",pico);
+    pico = Number(localStorage.getItem("pico"))||1;
+    document.getElementById("rocamina").innerHTML = pico
+    
+    
+   if(alrturtpic == true) {
+    trutpic = Number(localStorage.getItem("trutpic"));
+    milisecondss = localStorage.getItem("milisecondss",milisecondss);
+    wow = window.setInterval(Chambahierr, milisecondss);
+    document.getElementById("turt").innerHTML = "tu turt es"+trutpic+"/"+milisecondss
+   }
+    
+    if(alrrocturtpick == true) {
+        trutpic = Number(localStorage.getItem("rocktrutpic"));
+        rockmilisecondss = localStorage.getItem("rockmilisecondss");
+        ruckinterval = window.setInterval(chambarock, rockmilisecondss);
+        document.getElementById("rockturt").innerHTML = "tu turt de roca es"+rocktrutpic+"/"+rockmilisecondss
     }
-    if (localStorage.getItem("trutpictrufals") == true) {
-        trutpic = localStorage.getItem("trutpic",trutpic);
-        milisecondss = localStorage.getItem("milisecondss",milisecondss);
-        wow = window.setInterval(Chambahierr, milisecondss);
-        document.getElementById("hierrchamba").innerHTML = ""
-        document.getElementById("turt").innerHTML = "tu turt es"+trutpic+"/"+milisecondss
-
+    if(alrcoalturtpick == true) {
+        coalpic = Number(localStorage.getItem("coalpic"));
+        coalmilisecondss = localStorage.getItem("coalmili");
+        coalinterval = window.setInterval(coalchamba, coalmilisecondss);
+        document.getElementById("coalturt").innerHTML = "tu turt de carbon es"+coalpic+"/"+coalmilisecondss
     }
 
 
@@ -238,12 +261,14 @@ function Chambahierr() {
 }
 
 function msminos() {
-    aleanitecont -= 34020000000
-    document.getElementById("Aloyconter").innerHTML = aleanitecont
-    window.clearInterval(wow)
-    milisecondss -= 500
-    wow = window.setInterval(Chambahierr, milisecondss);
-    document.getElementById("turt").innerHTML = "tu turt es"+trutpic+"/"+milisecondss
+    if(aleanitecont>=34020000000) {
+        milisecondss -= 500
+        aleanitecont -= 34020000000
+        document.getElementById("Aloyconter").innerHTML = aleanitecont
+        window.clearInterval(wow)
+        wow = window.setInterval(Chambahierr, milisecondss);
+        document.getElementById("turt").innerHTML = "tu turt es"+trutpic+"/"+milisecondss
+    }
 }
 
 function Turtpicmasun() {
@@ -252,6 +277,8 @@ function Turtpicmasun() {
         aleanitecont -= 306180000000
         document.getElementById("Aloyconter").innerHTML = aleanitecont
         document.getElementById("turt").innerHTML = "tu turt es"+trutpic+"/"+milisecondss
+        window.clearInterval(wow)
+        wow = window.setInterval(Chambahierr, milisecondss);
     }
 }
 
@@ -276,6 +303,13 @@ function save() {
     localStorage.setItem("pico",pico);
     localStorage.setItem("trutpictrufals",alrturtpic);
     localStorage.setItem("saved",alrsaved);
+    localStorage.setItem("chipcant",chipcant);
+    localStorage.setItem("rocktrutpic",rocktrutpic);
+    localStorage.setItem("rockmilisecondss",rockmilisecondss);
+    localStorage.setItem("rocktrutpictrufals",alrrocturtpick);
+    localStorage.setItem("coalmili",coalmilisecondss);
+    localStorage.setItem("coalpic",coalpic);
+    localStorage.setItem("coalturtpick",alrcoalturtpick);
     document.getElementById("savres").innerHTML = "¡Guardado!"
     window.setTimeout(Timeout,5000)
 }
@@ -288,6 +322,98 @@ function reset() {
     localStorage.clear()
     document.getElementById("savres").innerHTML = "Reseteado!"
     window.setTimeout(Timeout,5000)
+    alrsaved = false
+    alrrocturtpick = false
+    alrturtpic = false
+}
+
+function createchip() {
+    chipcant += aleanitecont/2
+    chipcant += conthierro/2
+    chipcant += coalgi/2
+    aleanitecont = 0
+    conthierro = 0
+    coalgi = 0
+    document.getElementById("Aloyconter").innerHTML = aleanitecont
+    document.getElementById("hierruno").innerHTML = conthierro
+    document.getElementById("Coalcant").innerHTML = coalgi
+    document.getElementById("cantchip").innerHTML = chipcant
+}
+
+function createturt() {
+    if (chipcant >= 1100000) {
+        chipcant -= 1100000
+        document.getElementById("cantchip").innerHTML = chipcant
+        document.getElementById("rockturt").innerHTML = "tu turt es"+rocktrutpic+"/"+rockmilisecondss
+        ruckinterval = window.setInterval(chambarock, rockmilisecondss);
+        alrrocturtpick = true;
+        
+    }
+}
+
+function chambarock() {
+    controcas += rocktrutpic
+    document.getElementById("cantrocas").innerHTML = controcas
+}
+
+function rockturtminos() {
+    if(chipcant>=22000000) {
+        rockmilisecondss -= 500
+        chipcant -= 22000000
+        document.getElementById("cantchip").innerHTML = chipcant
+        window.clearInterval(ruckinterval)
+        ruckinterval = window.setInterval(chambarock, rockmilisecondss);
+        document.getElementById("rockturt").innerHTML = "tu turt es"+rocktrutpic+"/"+rockmilisecondss
+    }
+}
+
+function MASTurtrock() {
+    if(chipcant>=440000000) {
+        rocktrutpic += 50
+        chipcant -= 440000000
+        document.getElementById("cantchip").innerHTML = chipcant
+        document.getElementById("rockturt").innerHTML = "tu turt es"+rocktrutpic+"/"+rockmilisecondss
+    }
+}
+
+function createcoalturt() {
+    if (chipcant >= 1200000) {
+        chipcant -= 1200000
+        document.getElementById("cantchip").innerHTML = chipcant
+        coalmilisecondss = 5000
+        coalpic = 5
+        document.getElementById("coalturt").innerHTML = "tu turt es"+coalpic+"/"+coalmilisecondss
+        coalinterval = window.setInterval(coalchamba, coalmilisecondss);
+        alrcoalturtpick = true;
+        
+    }
+}
+
+function coalchamba() {
+    coalgi += coalpic
+    document.getElementById("Coalcant").innerHTML = coalgi
+}
+
+function coalminos() {
+    if(chipcant>=22500000) {
+        coalmilisecondss -= 500
+        chipcant -= 22500000
+        document.getElementById("cantchip").innerHTML = chipcant
+        window.clearInterval(coalmilisecondss)
+        coalinterval = window.setInterval(coalchamba, coalmilisecondss);
+        document.getElementById("coalturt").innerHTML = "tu turt es"+coalpic+"/"+coalmilisecondss
+    }
+}
+
+function Mascoalturt() {
+    if(chipcant>=444000000) {
+        coalpic += 50
+        chipcant -= 444000000
+        document.getElementById("cantchip").innerHTML = chipcant
+        document.getElementById("coalturt").innerHTML = "tu turt es"+coalpic+"/"+coalmilisecondss
+        window.clearInterval(coalmilisecondss)
+        coalinterval = window.setInterval(coalchamba, coalmilisecondss);
+    }
 }
 
 window.addEventListener("keydown", function entermalo(enter) {

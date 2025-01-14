@@ -17,14 +17,15 @@
             <br>
             <br>
             <div id="divo" >
-                <button id="Coal" onclick="Coalg()" >Minar Combustible <img src="RocaDeMineralDeCombustible.png" id="Coalimg" alt="No te carga?"> </button><h3 id="Coalcant">Aqui aparece tu combustible</h3>
+                <button id="Coal" onclick="Coalg()" >Minar Combustible <img src="RocaDeMineralDeCombustible.png" id="Coalimg" alt="No te carga?"> </button><h3 id="Coalcant">Aqui aparece tu combustible</h3><h3 id="coalturt" ></h3>
                 <br><br>  <button id="Minar" onclick="funcminar()" >Minar <img id="paiedera" src="piedra.png" alt="lol checa tu internet"> </button><br><br><button id="verde" onclick="vender()" >Vender <img id="a" src="imageedit_46_5298376867.png" alt="lol checa tu internet"> </button> <br><br> <button id="hierroingot" onclick="hierroconvert()" > convertir roca a hierro  <img id="hierro" src="lingote-de-hierro.png" alt="lol error"> </button> <button onclick="venderhierro()" id="Vendehierro"  >Vender hierro <img id="imgdinero" src="imageedit_46_5298376867.png" alt="Lol Bad Internet"> </button> <h3 id="cantrocas"> Aqui aparecera lo que haz minado </h3> <h3 id="miney" >aqui aparecera tu Dinero</h3><h2 id="hierruno" >aqui aparece tu hierro</h2>
                 <button id="alle" onclick="Createalloy()" >Crear Aleanita <img id="aleanitaimg" src="aleanite.png" alt="checa tu internet o pagalo"> </button><button id="alloysell" onclick="AlloySell()"  >Vender Alenita <img id="a" src="imageedit_46_5298376867.png" alt="lol checa tu internet"></button><h3 id="Aloyconter" >Aqui aparecera tu aleanita</h3><h3 id="turt"></h3>
             </div>
-            <button id="chipbut" >Crear Chips <img id="chipimg" src="chip.png" alt="lol bad internet"></button><h3 id="cantchip" >Aqui  apareceran tus chips</h3><h4 id="trutchip">tu turt es de 1/50000</h4>
+            <button id="chipbut" onclick="createchip()" >Crear Chips <img id="chipimg" src="chip.png" alt="lol bad internet"></button><h3 id="cantchip" >Aqui  apareceran tus chips</h3><h4 id="trutchip"></h4>
             <br>
             <h3>aqui aparece lo que minas por click</h3>
             <h3 id="rocamina"> 1 </h3>
+            <h3 id="rockturt"></h3>
         </center>
         <br>
         <h2 id="Mejoras" >Mejoras</h2>
@@ -42,6 +43,10 @@
         <span><button onclick="MAMejoracontrtiemp()" >Mejor control del tiempo (+5,006,250) 47,000,000 </button><button onclick="MAbrbiomej()" >brazo bionico mejorado (+45,056,250) 420,000,000</button>
         <button onclick="CreateInterval()" id="hierrchamba">Compra de turt de hierro (1/10s) 3,780,000,000</button><button onclick="msminos()" >Chambeador mas rapido (-500ms) 34,020,000,000</button>
         <button onclick="Turtpicmasun()" >turt pica mas (+5) 306,180,000,000 </button><button onclick="Turtpicmasdos()" >turt pica mas (+45) 2,755,620,000,000 </button>
+        </span>
+        <h2 id="Chipup" >Mejoras De Chips (se compran con chips obiamente)</h2>
+        <span>
+            <button onclick="createturt()" >Turt De piedra (1/5s) 1,100,000 </button> <button onclick="rockturtminos()" >Menor tiempo turt piedra (-500ms) 22,000,000</button><button onclick="MASTurtrock()" >Pica mas turt piedra (50+) 440,000,000 </button><button onclick="createcoalturt()" >Turt De Combustible (1/5s) 1,200,000 </button> <button onclick="coalminos()" >Menor tiempo de turt Combustible (-500ms) 22,500,000</button><button onclick="Mascoalturt()" >Pica mas turt coal (50+) 444,000,000 </button>
         </span>
         <br>
         <br>
