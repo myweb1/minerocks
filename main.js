@@ -15,6 +15,8 @@ var alrsaved = false
 var alrcoalturtpick = false
 var coalpic = 5 
 var coalmilisecondss = 5000
+var RockCost = 1
+var RockCostPlus = 1
 
 alrsaved = localStorage.getItem("saved")
 alrrocturtpick = localStorage.getItem("rocktrutpictrufals")
@@ -26,6 +28,12 @@ alrturtpic = localStorage.getItem("trutpictrufals")
     coalgi = Number(localStorage.getItem("combustible"))||0;
     aleanitecont = Number(localStorage.getItem("aleanite"))||0;
     chipcant = Number(localStorage.getItem("chipcant"))||0;
+    rocktrutpic = Number(localStorage.getItem("rocktrutpic"))||5;
+    rockmilisecondss = Number(localStorage.getItem("rockmilisecondss"))||5000;
+    coalpic = Number(localStorage.getItem("coalpic"))||5;
+    coalmilisecondss = Number(localStorage.getItem("coalmili"))||5000;
+    RockCost = Number(localStorage.getItem("RockCost"))||1;
+    RockCostPlus = Number(localStorage.getItem("RockCostPlus"))||1;
     document.getElementById("cantrocas").innerHTML = controcas
     document.getElementById("miney").innerHTML = dinero
     document.getElementById("hierruno").innerHTML = conthierro
@@ -310,6 +318,8 @@ function save() {
     localStorage.setItem("coalmili",coalmilisecondss);
     localStorage.setItem("coalpic",coalpic);
     localStorage.setItem("coalturtpick",alrcoalturtpick);
+    localStorage.setItem("RockCost",RockCost);
+    localStorage.setItem("RockCostPlus",RockCostPlus);
     document.getElementById("savres").innerHTML = "¡Guardado!"
     window.setTimeout(Timeout,5000)
 }
@@ -345,8 +355,8 @@ function createchip() {
 }
 
 function createturt() {
-    if (chipcant >= 1100000) {
-        chipcant -= 1100000
+    if (chipcant >= 10100000) {
+        chipcant -= 10100000
         document.getElementById("cantchip").innerHTML = chipcant
         document.getElementById("rockturt").innerHTML = "tu turt es"+rocktrutpic+"/"+rockmilisecondss
         ruckinterval = window.setInterval(chambarock, rockmilisecondss);
@@ -361,9 +371,11 @@ function chambarock() {
 }
 
 function rockturtminos() {
-    if(chipcant>=22000000) {
+    if(chipcant>= 22000000 * RockCost) {
         rockmilisecondss -= 500
-        chipcant -= 22000000
+        chipcant -= 22000000 * RockCost
+        RockCost += 1
+        document.getElementById("menor").innerHTML = "Menor tiempo turt piedra (-500ms)"+22000000 * RockCost
         document.getElementById("cantchip").innerHTML = chipcant
         window.clearInterval(ruckinterval)
         ruckinterval = window.setInterval(chambarock, rockmilisecondss);
@@ -372,9 +384,10 @@ function rockturtminos() {
 }
 
 function MASTurtrock() {
-    if(chipcant>=440000000) {
+    if(chipcant>=440000000 * RockCostPlus) {
         rocktrutpic += 50
-        chipcant -= 440000000
+        chipcant -= 440000000 * RockCostPlus
+        document.getElementById("Rockplus").innerHTML = "Pica mas turt piedra (50+)" + 440000000 * RockCostPlus
         document.getElementById("cantchip").innerHTML = chipcant
         document.getElementById("rockturt").innerHTML = "tu turt es"+rocktrutpic+"/"+rockmilisecondss
     }
