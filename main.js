@@ -344,7 +344,7 @@ function createchip() {
                 aleanitecont -= 100000000
                 conthierro -= 200000000
                 coalgi -= 100000000
-                chipcant += 1
+                chipcant += 10000
                 document.getElementById("Aloyconter").innerHTML = aleanitecont
                 document.getElementById("hierruno").innerHTML = conthierro
                 document.getElementById("Coalcant").innerHTML = coalgi
