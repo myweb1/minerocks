@@ -341,10 +341,13 @@ function createchip() {
     if (aleanitecont >= 100000000) {
         if (conthierro >= 200000000) {
             if (coalgi >= 100000000) {
-                aleanitecont -= 100000000
-                conthierro -= 200000000
-                coalgi -= 100000000
-                chipcant += 10000
+                chipcant += aleanitecont/2
+                chipcant += conthierro/2
+                chipcant += coalgi/2
+                aleanitecont = 0
+                conthierro = 0
+                coalgi = -0
+                
                 document.getElementById("Aloyconter").innerHTML = aleanitecont
                 document.getElementById("hierruno").innerHTML = conthierro
                 document.getElementById("Coalcant").innerHTML = coalgi
